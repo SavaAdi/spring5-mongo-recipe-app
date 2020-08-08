@@ -98,6 +98,8 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 
         List<Recipe> recipes = new ArrayList<>(2);
 
+        Iterable<UnitOfMeasure> iterable = unitOfMeasureRepository.findAll();
+        iterable.forEach(System.out::println);
         //get UOMs
         Optional<UnitOfMeasure> eachUomOptional = unitOfMeasureRepository.findByDescription("Each");
 
